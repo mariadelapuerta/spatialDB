@@ -22,8 +22,19 @@
 			id: 'mapbox.streets'
 		}).addTo(map);
 		L.marker([-34.5923333, -58.3991436]).addTo(map)
-			.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-		var popup = L.popup();
+			.bindPopup("<b>Starting Point</b>").openPopup();
+		//var popup = L.popup();
+
+		var polygon = L.polygon([
+   		[-34.592517, -58.401424], 
+    	[-34.590256, -58.400341],
+    	[-34.591536, -58.398184],
+    	[-34.593285, -58.399187]
+    	], {
+      		color: 'red',
+      		fillColor: '#f03',
+      		fillOpacity: 0.2
+    		}).addTo(map);
 	</script>
 </body>
 </html>
